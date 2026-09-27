@@ -1,0 +1,29 @@
+ICT Funded EA Pro v1.0.0-baseline
+==================================
+Date:       2026-07-21
+Decision:   KEEP
+Score:      8/8
+Trades:     53 (Batch 1)
+Net PnL:    +$2,524.92
+PF:         3.81
+Win Rate:   70.6%
+Fingerprint: 4be2045d306761d6
+
+IMMUTABLE — Do not modify any strategy file.
+Any change requires a new version branch (v1.1.0-dev).
+
+Baseline configuration (FROZEN):
+  Mode:        CONSERVATIVE (3 symbols)
+  Symbols:     US100.cash, XAUUSD, BTCUSD
+  Entry:       ICT/SMC detection + score threshold >= 90
+  Risk:        0.5% per trade
+  SL:          Based on structure (MSS/BOS sweep)
+  TP:          2.5R
+  Partial:     50% at 1R
+  BE:          Activate at 0.5R profit
+  Trailing:    DISABLED
+  Sessions:    London, New York (allowed), Sydney (WATCHLIST)
+  Score tiers: 90+ EXCELLENT, 80-89 WATCHLIST, 70-79 WAIT
+
+Next: Validation Batch 2 (50 trades, identical config)
+Compare: python -m analytics.compare_batches

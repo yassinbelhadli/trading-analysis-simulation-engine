@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Design System V2 — Design Tokens (pure CSS variables)
+   Works with Tailwind (via tokens.css) and plain CSS (website).
+   Dark-first: black foundation, goblin green primary, tech blue secondary.
+   Legacy aliases (--bg-*, --accent, ...) keep existing portal pages working.
+   ========================================================================== */
+
+:root {
+  /* --- Foundation: black / near-black surfaces --- */
+  --ds-base: #0a0c10;      /* app/page background */
+  --ds-raised: #11151c;    /* cards, panels, sidebar */
+  --ds-overlay: #161b24;   /* modals, dropdowns, popovers */
+  --ds-input: #0d1117;     /* form fields */
+  --ds-hover: #1a2029;     /* hover rows/buttons */
+  --ds-line: #1e2530;      /* standard borders */
+  --ds-line-strong: #2a3342; /* table dividers, focus base */
+
+  /* --- Goblin green (primary accent) --- */
+  --brand-green-300: #6ee7a0;
+  --brand-green-400: #3dd68c;
+  --brand-green-500: #12b76a;
+  --brand-green-600: #0e9f5c;
+  --brand-green-700: #0b8a50;
+  --brand-green-900: #065f46;
+  --brand-green-tint: rgba(18, 183, 106, 0.12);
+
+  /* --- Tech blue (secondary accent) --- */
+  --brand-blue-300: #7db4ff;
+  --brand-blue-400: #4c8dff;
+  --brand-blue-500: #2f7bf6;
+  --brand-blue-700: #1e4fd8;
+  --brand-blue-tint: rgba(47, 123, 246, 0.12);
+
+  /* --- Text / ink --- */
+  --ds-ink: #e6eaf0;         /* primary text */
+  --ds-ink-soft: #9aa6b5;    /* secondary text */
+  --ds-ink-muted: #5c6b7e;   /* muted / placeholders */
+  --ds-ink-inverse: #0a0c10; /* text on green/blue fills */
+
+  /* --- Semantic (separate from brand) --- */
+  --ds-ok: #16a34a;
+  --ds-warn: #f59e0b;
+  --ds-danger: #ef4444;
+  --ds-info: #2f7bf6;
+
+  /* --- Neutral ramp (grays) --- */
+  --ds-neutral-50: #f4f6f8;
+  --ds-neutral-100: #e8ecf1;
+  --ds-neutral-200: #d3dae3;
+  --ds-neutral-300: #b7c1ce;
+  --ds-neutral-400: #93a0b1;
+  --ds-neutral-500: #6b788c;
+  --ds-neutral-600: #4a5568;
+  --ds-neutral-700: #333d4d;
+  --ds-neutral-800: #202734;
+  --ds-neutral-900: #151a23;
+
+  /* --- Radius --- */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 999px;
+
+  /* --- Shadow --- */
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 0.45);
+  --shadow-lg: 0 20px 50px rgb(0 0 0 / 0.55);
+
+  /* --- Typography --- */
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* --- Layout --- */
+  --header-height: 56px;
+  --sidebar-width: 240px;
+  --sidebar-width-collapsed: 64px;
+
+  /* ======================================================================
+     LEGACY ALIASES — keep existing portal pages (v1 classes) working with
+     the V2 palette. New code should use the --ds-* / brand tokens above.
+     ====================================================================== */
+  --bg-primary: #0a0c10;
+  --bg-secondary: #11151c;
+  --bg-card: #11151c;
+  --text-primary: #e6eaf0;
+  --text-secondary: #9aa6b5;
+  --accent: #12b76a;        /* was blue -> now goblin green */
+  --accent-hover: #3dd68c;
+  --accent-soft: rgba(18, 183, 106, 0.12);
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #2f7bf6;
+  --border: #1e2530;
+  --border-strong: #2a3342;
+  --hover-bg: rgba(255, 255, 255, 0.05);
+  --on-accent: #0a0c10;
+}
+
+/* --- Light theme overrides --- */
+.light,
+html[data-theme="light"] {
+  --ds-base: #f4f6f8;
+  --ds-raised: #ffffff;
+  --ds-overlay: #ffffff;
+  --ds-input: #ffffff;
+  --ds-hover: rgba(10, 12, 16, 0.05);
+  --ds-line: #dce3ec;
+  --ds-line-strong: #c3cdda;
+
+  --brand-green-300: #34d399;
+  --brand-green-400: #10b981;
+  --brand-green-500: #0e9f5c;
+  --brand-green-600: #0b8a50;
+  --brand-green-700: #0a6e42;
+  --brand-green-900: #064e35;
+  --brand-green-tint: rgba(14, 159, 92, 0.1);
+
+  --brand-blue-300: #93c5fd;
+  --brand-blue-400: #60a5fa;
+  --brand-blue-500: #2563eb;
+  --brand-blue-700: #1d4ed8;
+  --brand-blue-tint: rgba(37, 99, 235, 0.1);
+
+  --ds-ink: #10151d;
+  --ds-ink-soft: #46536a;
+  --ds-ink-muted: #6b788c;
+  --ds-ink-inverse: #ffffff;
+
+  --ds-ok: #15803d;
+  --ds-warn: #b45309;
+  --ds-danger: #dc2626;
+  --ds-info: #2563eb;
+
+  --shadow-sm: 0 1px 2px rgb(16 21 29 / 0.06);
+  --shadow-md: 0 8px 24px rgb(16 21 29 / 0.1);
+  --shadow-lg: 0 20px 50px rgb(16 21 29 / 0.14);
+
+  --bg-primary: #f4f6f8;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #10151d;
+  --text-secondary: #46536a;
+  --accent: #0e9f5c;
+  --accent-hover: #0b8a50;
+  --accent-soft: rgba(14, 159, 92, 0.1);
+  --success: #15803d;
+  --warning: #b45309;
+  --error: #dc2626;
+  --info: #2563eb;
+  --border: #dce3ec;
+  --border-strong: #c3cdda;
+  --hover-bg: rgba(10, 12, 16, 0.05);
+  --on-accent: #ffffff;
+}

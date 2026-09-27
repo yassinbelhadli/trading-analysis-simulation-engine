@@ -1,0 +1,1 @@
+from .base_provider import BaseNewsProvider

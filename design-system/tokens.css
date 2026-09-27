@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Design System V2 — Tailwind v4 integration
+   Import this in each portal's global CSS AFTER variables.css, then use the
+   generated utilities: bg-base, bg-raised, text-ink, border-line,
+   bg-brand-500, text-tech-400, text-ok/warn/danger/info, font-display/body/mono.
+
+   @source makes each portal's Tailwind scan this folder's components.
+   ========================================================================== */
+
+@import "./variables.css";
+@source "../design-system/components";
+
+@theme {
+  /* --- Surfaces --- */
+  --color-base: var(--ds-base);
+  --color-raised: var(--ds-raised);
+  --color-overlay: var(--ds-overlay);
+  --color-input: var(--ds-input);
+  --color-hover: var(--ds-hover);
+  --color-line: var(--ds-line);
+  --color-line-strong: var(--ds-line-strong);
+
+  /* --- Brand --- */
+  --color-brand-300: var(--brand-green-300);
+  --color-brand-400: var(--brand-green-400);
+  --color-brand-500: var(--brand-green-500);
+  --color-brand-600: var(--brand-green-600);
+  --color-brand-700: var(--brand-green-700);
+  --color-brand-900: var(--brand-green-900);
+  --color-brand-tint: var(--brand-green-tint);
+
+  --color-tech-300: var(--brand-blue-300);
+  --color-tech-400: var(--brand-blue-400);
+  --color-tech-500: var(--brand-blue-500);
+  --color-tech-700: var(--brand-blue-700);
+  --color-tech-tint: var(--brand-blue-tint);
+
+  /* --- Ink --- */
+  --color-ink: var(--ds-ink);
+  --color-ink-soft: var(--ds-ink-soft);
+  --color-ink-muted: var(--ds-ink-muted);
+  --color-ink-inverse: var(--ds-ink-inverse);
+
+  /* --- Semantic --- */
+  --color-ok: var(--ds-ok);
+  --color-warn: var(--ds-warn);
+  --color-danger: var(--ds-danger);
+  --color-info: var(--ds-info);
+
+  /* --- Neutral ramp --- */
+  --color-neut-50: var(--ds-neutral-50);
+  --color-neut-100: var(--ds-neutral-100);
+  --color-neut-200: var(--ds-neutral-200);
+  --color-neut-300: var(--ds-neutral-300);
+  --color-neut-400: var(--ds-neutral-400);
+  --color-neut-500: var(--ds-neutral-500);
+  --color-neut-600: var(--ds-neutral-600);
+  --color-neut-700: var(--ds-neutral-700);
+  --color-neut-800: var(--ds-neutral-800);
+  --color-neut-900: var(--ds-neutral-900);
+
+  /* --- Fonts --- */
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* --- Shadows --- */
+  --shadow-soft: var(--shadow-sm);
+  --shadow-lift: var(--shadow-md);
+  --shadow-pop: var(--shadow-lg);
+
+  /* --- Radius --- */
+  --radius-box-sm: var(--radius-sm);
+  --radius-box: var(--radius-md);
+  --radius-box-lg: var(--radius-lg);
+  --radius-box-xl: var(--radius-xl);
+  --radius-pill: var(--radius-pill);
+}

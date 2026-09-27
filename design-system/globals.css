@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Design System V2 — Base styles (globals)
+   Import this AFTER tokens.css. Provides element defaults, scrollbars,
+   focus rings, selection and small shared helpers.
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--ds-base);
+  color: var(--ds-ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--ds-ink);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--brand-green-400);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--brand-green-300);
+}
+
+code,
+pre,
+kbd,
+.mono,
+.stat-value,
+.pid-chip {
+  font-family: var(--font-mono);
+}
+
+/* --- Focus ring (brand green, visible on dark) --- */
+:focus-visible {
+  outline: 2px solid var(--brand-green-500);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--brand-green-500);
+  color: var(--ds-ink-inverse);
+}
+
+/* --- Scrollbars (WebKit + Firefox) --- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ds-line-strong) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--ds-line-strong);
+  border-radius: 8px;
+  border: 2px solid var(--ds-base);
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* --- Shared helpers --- */
+.ds-chip-logo {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 6px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-card-hover {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ds-card-hover:hover {
+  border-color: var(--ds-line-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Emoji leftovers in UI chrome are banned by the V2 spec — flag them in dev. */
+.ds-no-emoji {
+  user-select: none;
+}
+
+.ds-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

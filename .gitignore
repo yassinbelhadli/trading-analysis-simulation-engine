@@ -1,0 +1,93 @@
+# Environment / secrets
+.env
+.env.*
+config/.env
+database/.env
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+
+# Local/private data
+*.db
+*.sqlite
+*.sqlite3
+
+# Secrets / keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# OS / IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Project debug / generated artifacts
+*.err
+*.html
+*.txt
+*.json
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# Local runtime / generated files
+storage/
+media/
+data/
+logs/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Local configuration
+config/.env
+database/.env
+
+# Temporary scripts / dumps
+_dump_*
+_last_*
+_db_check.py
+_openapi.json
+_routes_dump.txt
+
+# Next.js
+.next/
+**/.next/
+out/
+**/tsconfig.tsbuildinfo
+
+# Build output
+dist/
+build/
+
+# Python bytecode
+*.pyc
+
+# Binaries
+*.exe
+
+# Local runtime
+*.pid
+
+# Private/runtime trading reports
+reports/
+backtester/reports/
